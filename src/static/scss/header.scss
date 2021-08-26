@@ -22,7 +22,7 @@
 
 .logo {
     background-size: 59px 50px;
-    height: 50px;
+    height: 5px;
     width: 50px;
     padding: 0px 5px;
 }
@@ -65,9 +65,12 @@
         padding: 7px !important;
         border-radius: 0.6rem;
     }
-
-    .signup:hover {
-        background: linear-gradient(45deg, #1DBFAF 0, #1EAEDB 85%, #1EAEDB 100%);
+    .btnv-1{
+        background-color: inherit; 
+    }
+    .signup:hover ,.btnv-1:hover{
+        background: linear-gradient(45deg, #1DBFAF 0, #1EAEDB 85%, #1EAEDB 100%) !important;
+        color: white;
     }
 
     .signup a:hover {
@@ -77,9 +80,6 @@
     .signin a:hover {
         color: black !important;
     }
-
-
-  
 
 
     .header-link-container{

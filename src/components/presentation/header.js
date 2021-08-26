@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 import logo from "../../static/images/logo.png";
 import {connect} from 'react-redux';
 import {isLoaded,isEmpty} from 'react-redux-firebase';
@@ -32,14 +32,19 @@ const Header = (props) => {
   return (  
   <header className="header">
   <nav className="nav">
-      <a href="/" className="holder-logo">
-        <img className='logo' src={logo}></img>
-      </a> 
+      <Link to="/" className="holder-logo" style={{display:'flex'}}>
+      <img src="https://img.icons8.com/color/48/000000/resume.png"/><h2>Resume Builder</h2>
+      </Link> 
         <div className="header-links full-height">
 
         { isLoaded(auth) && !isEmpty(auth) ?<>
 
           <ul>
+            <li>
+              <NavLink className="btn-nvt-gm" to="/resume-templates">
+              Resume Templates
+              </NavLink>
+            </li> 
             <li className="signin ">
               <NavLink className="  " to="/">
                Logged in as {auth.email}
@@ -55,11 +60,7 @@ const Header = (props) => {
         </>:<LoggesOut></LoggesOut>}
           
           <ul id="nav-mid">
-            <li>
-            <NavLink className="btn-nvt-gm" to="/resume-templates">
-            Resume Templates
-            </NavLink>
-            </li> 
+            
             <li className="holder-pricing">            
               <NavLink className="btn-nvt-gm" to="/about-us">
               About Us

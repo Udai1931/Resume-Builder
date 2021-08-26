@@ -42,7 +42,7 @@ function GettingStarted(props) {
             </div>
         </div>
     );
-}
+} 
   
 const mapStateToProps = (state) => {
     return {
